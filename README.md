@@ -1,29 +1,20 @@
-# <div align='center'>@TanakaDomp/LilycwhannnBails - Typescript/Javascript WhatsApp Web API</div>
+# <div align='center'>@HaidarMahiru/HaidarMahiru-Baileys - Typescript/Javascript WhatsApp Web API</div>
 
 <div align='center'>
 
-![GitHub Downloads (all assets, all releases)](https://img.shields.io/github/downloads/TanakaDomp/LilycwhannnBails/total)
-![NPM Downloads](https://img.shields.io/npm/dw/%40whiskeysockets%2Fbaileys?label=npm&color=%23CB3837)
-![GitHub code size in bytes](https://img.shields.io/github/languages/code-size/TanakaDomp/LilycwhannnBails)
-![GitHub License](https://img.shields.io/github/license/TanakaDomp/LilycwhannnBails)
-![Discord](https://img.shields.io/discord/725839806084546610?label=discord&color=%235865F2)
-![GitHub Repo stars](https://img.shields.io/github/stars/TanakaDomp/LilycwhannnBails)
-![GitHub forks](https://img.shields.io/github/forks/TanakaDomp/LilycwhannnBails)
-
-</div>
 
 ## Community
 
-> Join the Channel [here](https://whatsapp.com/channel/0029VaW25g5F1YlKczMRmd1h)
+> Join the Channel [here](https://whatsapp.com/channel/0029VadDSPFATRSjubfKrU1n/)
 
-> Join the Group [here](https://chat.whatsapp.com/DrqZxEeI8v9H83ynYvkVOP)
+> Join the Group [here](https://chat.whatsapp.com/DcttriOn7WTFWlFBw2vCDW)
 
 ### Important Note
 
 This library was originally a project for **CS-2362 at Ashoka University** and is in no way affiliated with or endorsed by WhatsApp. Use at your own discretion. Do not spam people with this. We discourage any stalkerware, bulk or automated messaging usage. 
 
 #### Liability and License Notice
-Baileys and its maintainers cannot be held liable for misuse of this application, as stated in the [MIT license](https://github.com/TanakaDomp/LilycwhannnBails/blob/master/LICENSE).
+Baileys and its maintainers cannot be held liable for misuse of this application, as stated in the [MIT license](https://github.com/HaidarMahiru/HaidarMahiru-Baileys/blob/master/LICENSE).
 The maintainers of Baileys do not in any way condone the use of this application in practices that violate the Terms of Service of WhatsApp. The maintainers of this application call upon the personal responsibility of its users to use this application in a fair way, as it is intended to be used.
 ##
 
@@ -36,7 +27,7 @@ Thank you to [@pokearaujo](https://github.com/pokearaujo/multidevice) for writin
 
 The original repository had to be removed by the original author - we now continue development in this repository here.
 This is the only official repository and is maintained by the community.
- **Join the Channel [here](https://whatsapp.com/channel/0029VaNWOo25a23wPyW7mM0n)**
+ **Join the Channel [here](https://whatsapp.com/channel/0029VadDSPFATRSjubfKrU1n/)**
  
  
 ## Example
@@ -52,17 +43,17 @@ To run the example script, download or clone the repo and then type the followin
 
 Use the stable version:
 ```
-yarn add @TanakaDomp/LilycwhannnBails
+yarn add @HaidarMahiru/HaidarMahiru-Baileys
 ```
 
 Use the edge version (no guarantee of stability, but latest fixes + features)
 ```
-yarn add github:TanakaDomp/LilycwhannnBails
+yarn add github:HaidarMahiru/HaidarMahiru-Baileys
 ```
 
 Then import your code using:
 ``` ts 
-import makeWASocket from '@TanakaDomp/LilycwhannnBails'
+import makeWASocket from '@HaidarMahiru/HaidarMahiru-Baileys'
 ```
 
 ## Unit Tests
@@ -74,7 +65,7 @@ TODO
 WhatsApp provides a multi-device API that allows Baileys to be authenticated as a second WhatsApp client by scanning a QR code with WhatsApp on your phone.
 
 ``` ts
-import makeWASocket, { DisconnectReason } from '@TanakaDomp/LilycwhannnBails'
+import makeWASocket, { DisconnectReason } from '@HaidarMahiru/HaidarMahiru-Baileys'
 import { Boom } from '@hapi/boom'
 
 async function connectToWhatsApp () {
@@ -212,7 +203,7 @@ You obviously don't want to keep scanning the QR code every time you want to con
 
 So, you can load the credentials to log back in:
 ``` ts
-import makeWASocket, { BufferJSON, useMultiFileAuthState } from '@TanakaDomp/LilycwhannnBails'
+import makeWASocket, { BufferJSON, useMultiFileAuthState } from '@HaidarMahiru/HaidarMahiru-Baileys'
 import * as fs from 'fs'
 
 // utility function to help save the auth state in a single folder
@@ -327,7 +318,7 @@ Baileys does not come with a defacto storage for chats, contacts, or messages. H
 It can be used as follows:
 
 ``` ts
-import makeWASocket, { makeInMemoryStore } from '@TanakaDomp/LilycwhannnBails'
+import makeWASocket, { makeInMemoryStore } from '@HaidarMahiru/HaidarMahiru-Baileys'
 // the store maintains the data of the WA connection in memory
 // can be written out to a file & read from it
 const store = makeInMemoryStore({ })
@@ -366,7 +357,7 @@ The store also provides some simple functions such as `loadMessages` that utiliz
 ### Non-Media Messages
 
 ``` ts
-import { MessageType, MessageOptions, Mimetype } from '@TanakaDomp/LilycwhannnBails'
+import { MessageType, MessageOptions, Mimetype } from '@HaidarMahiru/HaidarMahiru-Baileys'
 
 const id = 'abcd@s.whatsapp.net' // the WhatsApp ID 
 // send a simple text!
@@ -442,7 +433,7 @@ Sending media (video, stickers, images) is easier & more efficient than ever.
 - When specifying a media url, Baileys never loads the entire buffer into memory; it even encrypts the media as a readable stream.
 
 ``` ts
-import { MessageType, MessageOptions, Mimetype } from '@TanakaDomp/LilycwhannnBails'
+import { MessageType, MessageOptions, Mimetype } from '@HaidarMahiru/HaidarMahiru-Baileys'
 // Sending gifs
 await sock.sendMessage(
     id, 
@@ -491,7 +482,7 @@ await sock.sendMessage(
                                     Do not enter this field if you want to automatically generate a thumb
                                 */
         mimetype: Mimetype.pdf, /* (for media messages) specify the type of media (optional for all media types except documents),
-                                    import {Mimetype} from '@TanakaDomp/LilycwhannnBails'
+                                    import {Mimetype} from '@HaidarMahiru/HaidarMahiru-Baileys'
                                 */
         fileName: 'somefile.pdf', // (for media messages) file name for the media
         /* will send audio messages as voice notes, if set to true */
@@ -550,7 +541,7 @@ The presence expires after about 10 seconds.
 If you want to save the media you received
 ``` ts
 import { writeFile } from 'fs/promises'
-import { downloadMediaMessage } from '@TanakaDomp/LilycwhannnBails'
+import { downloadMediaMessage } from '@HaidarMahiru/HaidarMahiru-Baileys'
 
 sock.ev.on('messages.upsert', async ({ messages }) => {
     const m = messages[0]
